@@ -1,0 +1,29 @@
+{extends file="webseitenvorlage.html"}
+{block name=inhalt}
+
+    <h1>Neuen Eintrag ins Gästebuch machen</h1>
+    
+    <form action="eintrag_speichern.php" method="post">
+	    <table>
+	        <tr>
+	            <th>Absender</th>
+	            <td><input type="text" name="absender" value="{$smarty.request.absender}"></td>
+	        </tr>
+	        <tr>
+	            <th>Betreff</th>
+	            <td><input type="text" name="betreff" value="{$smarty.request.betreff}"></td>
+	        </tr>
+	        <tr>
+	            <th>Email</th>
+	            <td><input type="text" name="email" value="{$smarty.request.email}"></td>
+	        </tr>
+	        <tr>
+	            <th>Nachricht</th>
+	            <td><textarea name="nachricht" cols="20" rows="5">{$smarty.request.nachricht}</textarea></td>
+	        </tr>             
+	        <tr>
+	            <td colspan="2"><input type="submit" value="Absenden" ></td>
+	        </tr>    
+	    </table>
+    </form>
+{/block}

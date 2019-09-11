@@ -1,0 +1,21 @@
+{extends file="webseitenvorlage.html"}
+{block name=inhalt}
+
+    <h1>Login</h1>
+    {$fehlermeldungen}
+    <form action="login.php" method="post">
+	    <table>
+	        <tr>
+	            <th>Benutzername</th>
+	            <td><input type="text" name="benutzername" value=""></td>
+	        </tr>
+	        <tr>
+	            <th>Passwort</th>
+	            <td><input type="password" name="passwort" value=""></td>
+	        </tr>
+	        <tr>
+	            <td colspan="2"><input type="submit" value="Einloggen" ></td>
+	        </tr>    
+	    </table>
+    </form>
+{/block}

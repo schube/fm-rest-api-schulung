@@ -1,0 +1,13 @@
+<p>Liste der Einträge {$paginator->getRecordRange()} von insgesamt {$paginator->getFoundCount()} Einträgen</p>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+	{if $paginator->getLinkFirst() neq ""}<li class="page-item"><a class="page-link" href="{$paginator->getLinkFirst()}">&laquo;</a></li>{/if}
+	{if $paginator->getLinkPrevious() neq ""}<li class="page-item"><a class="page-link" href="{$paginator->getLinkPrevious()}">&lt;</a></li>{/if}</td>
+	{foreach key=id item=nav from=$paginator->getListNavigation(10)}
+		<li class="page-item {if $nav.current_page eq true}active{/if}"><a class="page-link" href="{$nav.link}">{$nav.page}</a>
+	{/foreach}
+	{if $paginator->getLinkNext() neq ""}<li class="page-item"><a class="page-link" href="{$paginator->getLinkNext()}">&gt;</a></li>{/if}
+	{if $paginator->getLinkLast() neq ""}<li class="page-item"><a class="page-link" href="{$paginator->getLinkLast()}">&raquo;</a></li>{/if}
+  </ul>
+</nav>

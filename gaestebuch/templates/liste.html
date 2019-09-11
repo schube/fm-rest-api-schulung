@@ -1,0 +1,52 @@
+
+{extends file="webseitenvorlage.html"}
+{block name=inhalt}
+	    Mein Gästebuch
+	    <table>
+	    {foreach item=record from=$result}
+	        {if $record->field('Foto') neq ""}
+	        <tr>
+	            <th>Foto</th>
+	            <td><img src="data:image/jpeg;base64,{$record->getContainerData('Foto')}"></td>
+	        </tr>
+	        {/if}
+	        <tr>
+	            <th>Vorname</th>
+	            <td>{$record->field('Absender')}</td>
+	        </tr>
+	        <tr>
+	            <th>Betreff</th>
+	            <td>{$record->field('Betreff')}</td>
+	        </tr>
+	        <tr>
+	            <th>Email</th>
+	            <td>{$record->field('Email')}</td>
+	        </tr>
+	        <tr>
+	            <th>Nachricht</th>
+	            <td>{$record->field('Nachricht')}</td>
+	        </tr>   
+	        <tr>
+	            <th>Datum und Uhrzeit</th>
+	            <td>{$record->field('DatumUndUhrzeit')}</td>
+	        </tr> 
+	        <tr>
+	            <th>Optionen</th>
+	            <td><a href="./loeschen.php?recordid={$record->getRecordId()}" class="btn btn-danger">Löschen</a> |
+	            <a href="./duplizieren.php?recordid={$record->getRecordId()}">Duplizieren</a> |
+	            <a href="./editieren.php?recordid={$record->getRecordId()}">Ändern</a> |
+	            <a href="./eintrag_per_email_versenden.php?recordid={$record->getRecordId()}">Eintrag per Email versenden</a></td>
+	        </tr> 
+	        <tr>
+	            <td colspan="2"><hr /></td>
+	        </tr>    
+	    {/foreach}
+	    </table>
+	<a href="neu.php" class="btn btn-primary btn-lg">Neuen Eintrag anlegen</a> | 
+	<a href="eintraege_als_pdf.php">Einträge als PDF abspeichern</a> | 
+	<a href="eintraege_als_csv.php">Einträge als CSV abspeichern</a> | 
+	<a href="eintraege_als_svg.php">Einträge als SVG ansehen</a>	
+	<hr />
+	{include file="paginator.html"}	
+{/block}
+<html><h1>Test</h1></html>

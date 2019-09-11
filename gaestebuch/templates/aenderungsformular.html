@@ -1,0 +1,33 @@
+{extends file="webseitenvorlage.html"}
+{block name=inhalt}
+
+    <h1>Eintrag aus dem Gästebuch ändern</h1>
+    {foreach $fehlermeldungen as $fehlermeldung}
+    	{$fehlermeldung}<br />
+    {/foreach}
+    <form action="aenderung_speichern.php" method="post">
+    <input type="hidden" name="recordId" value="{$recordId}">
+    <input type="hidden" name="modId" value="{$modId}">
+	    <table>
+	        <tr>
+	            <th>Absender</th>
+	            <td><input type="text" name="Absender" value="{$Absender}"></td>
+	        </tr>
+	        <tr>
+	            <th>Betreff</th>
+	            <td><input type="text" name="Betreff" value="{$Betreff}"></td>
+	        </tr>
+	        <tr>
+	            <th>Email</th>
+	            <td><input type="text" name="Email" value="{$Email}"></td>
+	        </tr>
+	        <tr>
+	            <th>Nachricht</th>
+	            <td><textarea name="Nachricht" cols="20" rows="5">{$Nachricht}</textarea></td>
+	        </tr>             
+	        <tr>
+	            <td colspan="2"><input type="submit" value="Änderung speichern" class="btn btn-primary"></td>
+	        </tr>    
+	    </table>
+    </form>
+{/block}

@@ -1,0 +1,8 @@
+{extends file="webseitenvorlage.html"}
+{block name=inhalt}
+    <h1>Fehler</h1>
+    <pre>
+        Message: {$exception->getMessage()}<br />
+        Code: {$exception->getCode()}
+    </pre>
+{/block}
