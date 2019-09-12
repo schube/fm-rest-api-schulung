@@ -1,1 +1,3 @@
 .project
+gaestebuch/vendor
+composer.lock
