@@ -2,7 +2,7 @@
     "require": {
         "smarty/smarty": "^3.1",
         "inter-mediator/fmdataapi": "^18.0",
-        "schubec/php-helpers": "0.0.1",
+        "schubec/php-helpers": "0.0.2",
         "setasign/fpdf": "^1.8",
         "setasign/fpdi": "^2.2",
         "setasign/fpdi-fpdf": "^2.2",

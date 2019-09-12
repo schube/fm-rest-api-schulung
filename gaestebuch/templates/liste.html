@@ -1,7 +1,7 @@
 
 {extends file="webseitenvorlage.html"}
 {block name=inhalt}
-	    Mein Gästebuch
+	    <h1>Mein Gästebuch</h1>
 	    <table>
 	    {foreach item=record from=$result}
 	        {if $record->field('Foto') neq ""}
@@ -27,9 +27,18 @@
 	            <td>{$record->field('Nachricht')}</td>
 	        </tr>   
 	        <tr>
-	            <th>Datum und Uhrzeit</th>
-	            <td>{$record->field('DatumUndUhrzeit')}</td>
+	            <th>Datum</th>
+	            <td>{$record->field('Datum')|strtotime|date_format:"%B %e, %Y"}</td>
+	        </tr>
+	        <tr>
+	            <th>Uhrzeit</th>
+	            <td>{$record->field('Uhrzeit')|strtotime|date_format:"%H:%M:%S"}</td>
 	        </tr> 
+	        <tr>
+	            <th>Datum und Uhrzeit</th>
+	            <td>{$record->field('DatumUndUhrzeit')|strtotime|date_format:"%A, %B %e, %Y / %H:%M:%S"}</td>
+	        </tr> 
+	         
 	        <tr>
 	            <th>Optionen</th>
 	            <td><a href="./loeschen.php?recordid={$record->getRecordId()}" class="btn btn-danger">Löschen</a> |
