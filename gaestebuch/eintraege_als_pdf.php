@@ -5,7 +5,7 @@ use INTERMediator\FileMakerServer\RESTAPI\FMDataAPI as FMDataAPI;
 use setasign\Fpdi\Tcpdf\Fpdi as Fpdi;
 
 $fmdb = new FMDataAPI(FM_DATABASE, FM_USER, FM_PASSWORD, FM_HOST);
-$result = $fmdb->layout('www')->query(null, null, - 1, 10);
+$result = $fmdb->layout('www')->query(null, null, 0, 10);
 
 // initiate FPDI
 $pdf = new Fpdi();

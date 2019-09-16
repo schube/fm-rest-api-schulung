@@ -11,14 +11,13 @@ $fmdb = new FMDataAPI(FM_DATABASE, FM_USER, FM_PASSWORD, FM_HOST);
 
 try {
 	$data = [ ];
-	$data ['recordId'] = Request::getParameter('recordId');
-	$data ['modId'] = Request::getParameter('modId');
 	$data ['Absender'] = Request::getParameter('Absender');
 	$data ['Betreff'] = Request::getParameter('Betreff');
 	$data ['Nachricht'] = Request::getParameter('Nachricht');
+	$data ['Email'] = Request::getParameter('Email');
 	$recordId = Request::getRequiredParameter('recordId');
 	$modId = Request::getRequiredParameter('modId');
-
+	
 	$fehlermeldungen = [];
 	if(!$data ['Absender']) {
 		$fehlermeldungen[] ='Bitte füllen Sie das Feld ABSENDER aus.';
@@ -31,12 +30,9 @@ try {
 	if(strlen($data ['Nachricht'] )<5 ) {
 		$fehlermeldungen[] ='Bitte geben Sie eine Nachricht an, die länger als 5 Zeichen ist.';
 	}
-	$data ['Email'] = Request::getParameter('Email');
 	if (!empty($fehlermeldungen)) {
 		$smarty->assign('fehlermeldungen',$fehlermeldungen);
-		foreach ( $data as $key => $value ) {
-			$smarty->assign($key, $value);
-		}
+		$smarty->assign('data', $data);
 		$smarty->display('aenderungsformular.html');
 		return;
 	}

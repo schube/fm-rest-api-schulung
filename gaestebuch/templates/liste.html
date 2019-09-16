@@ -4,7 +4,7 @@
 	    <h1>Mein Gästebuch</h1>
 	    <table>
 	    {foreach item=record from=$result}
-	        {if $record->field('Foto') neq ""}
+	        {if $record->field('Foto') eq "12"}
 	        <tr>
 	            <th>Foto</th>
 	            <td><img src="data:image/jpeg;base64,{$record->getContainerData('Foto')}"></td>

@@ -5,24 +5,25 @@ use Schubec\PHPHelpers\Request as Request;
 use INTERMediator\FileMakerServer\RESTAPI\FMDataAPI as FMDataAPI;
 
 $data = [ ];
-
-$fehlermeldungen = [ ];
-if (! Request::hasParameter('Absender')) {
-	$fehlermeldungen [] = 'Bitte füllen Sie das Feld ABSENDER aus.';
-} else {
-	$data ['Absender'] = Request::getParameter('Absender');
-}
-if (! Request::hasParameter('Betreff')) {
-	$fehlermeldungen [] = 'Bitte füllen Sie das Feld BETREFF aus.';
-} else {
-	$data ['Betreff'] = Request::getParameter('Betreff');
-}
-if (strlen(Request::getParameter('Nachricht', '')) < 5) {
-	$fehlermeldungen [] = 'Bitte geben Sie eine Nachricht an, die länger als 5 Zeichen ist.';
-} else {
-	$data ['Nachricht'] = Request::getParameter('Nachricht');
-}
+$data ['Absender'] = Request::getParameter('Absender');
+$data ['Betreff'] = Request::getParameter('Betreff');
+$data ['Nachricht'] = Request::getParameter('Nachricht');
 $data ['Email'] = Request::getParameter('Email');
+
+$fehlermeldungen = [];
+if(!$data ['Absender']) {
+	$fehlermeldungen[] ='Bitte füllen Sie das Feld ABSENDER aus.';
+}
+
+if(!$data ['Betreff']) {
+	$fehlermeldungen[] ='Bitte füllen Sie das Feld BETREFF aus.';
+}
+
+if(strlen($data ['Nachricht'] )<5 ) {
+	$fehlermeldungen[] ='Bitte geben Sie eine Nachricht an, die länger als 5 Zeichen ist.';
+}
+
+
 
 $smarty = new Smarty();
 if (empty($fehlermeldungen)) {
@@ -32,9 +33,7 @@ if (empty($fehlermeldungen)) {
 	$smarty->display('angelegt.html');
 } else {
 	$smarty->assign('fehlermeldungen', $fehlermeldungen);
-	foreach ( $data as $key => $value ) {
-		$smarty->assign($key, $value);
-	}
+	$smarty->assign('data', $data);
 	$smarty->display('eingabeformular.html');
 }
 

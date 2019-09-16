@@ -3,23 +3,27 @@
 
     <h1>Neuen Eintrag ins Gästebuch machen</h1>
     
+    {foreach $fehlermeldungen as $fehlermeldung}
+    	{$fehlermeldung}<br />
+    {/foreach}
+    
     <form action="eintrag_speichern.php" method="post">
 	    <table>
 	        <tr>
 	            <th>Absender</th>
-	            <td><input type="text" name="absender" value="{$smarty.request.absender}"></td>
+	            <td><input type="text" name="Absender" value="{$data['Absender']}"></td>
 	        </tr>
 	        <tr>
 	            <th>Betreff</th>
-	            <td><input type="text" name="betreff" value="{$smarty.request.betreff}"></td>
+	            <td><input type="text" name="Betreff" value="{$data['Betreff']}"></td>
 	        </tr>
 	        <tr>
 	            <th>Email</th>
-	            <td><input type="text" name="email" value="{$smarty.request.email}"></td>
+	            <td><input type="text" name="Email" value="{$data['Email']}"></td>
 	        </tr>
 	        <tr>
 	            <th>Nachricht</th>
-	            <td><textarea name="nachricht" cols="20" rows="5">{$smarty.request.nachricht}</textarea></td>
+	            <td><textarea name="Nachricht" cols="20" rows="5">{$data['Nachricht']}</textarea></td>
 	        </tr>             
 	        <tr>
 	            <td colspan="2"><input type="submit" value="Absenden" ></td>

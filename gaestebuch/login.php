@@ -8,7 +8,7 @@ use INTERMediator\FileMakerServer\RESTAPI\FMDataAPI as FMDataAPI;
 $smarty = new Smarty();
 
 if(!Request::hasParameter('benutzername') || !Request::hasParameter('passwort')) {
-
+	$smarty->assign('fehlermeldungen', null);
 	$smarty->display('login_formular.html');
 
 } else {

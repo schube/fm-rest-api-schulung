@@ -14,7 +14,10 @@ $offset = Request::getParameter('offset', 0);
 $fmdb = new FMDataAPI(FM_DATABASE, FM_USER, FM_PASSWORD, FM_HOST);
 //$fmdb->setDebug(true);
 //$fmdb->startCommunication();
-$result = $fmdb->layout('www')->query(null, null, $offset, $itemsPerPage);
+$sort = [];
+$sort[] = array('DatumUndUhrzeit', 'descend');
+
+$result = $fmdb->layout('www')->query(null, $sort, $offset, $itemsPerPage);
 
 // var_dump($result->getFieldnames());
 

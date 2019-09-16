@@ -5,7 +5,7 @@ use Schubec\PHPHelpers\Session as Session;
 use Schubec\PHPHelpers\Request as Request;
 use INTERMediator\FileMakerServer\RESTAPI\FMDataAPI as FMDataAPI;
 
-if (Session::getRequiredValue('angemeldet') === true) {
+if (Session::getValue('angemeldet') === true) {
 
 	$smarty = new Smarty();
 	try {
