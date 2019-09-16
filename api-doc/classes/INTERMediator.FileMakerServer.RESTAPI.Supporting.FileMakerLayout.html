@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \INTERMediator\FileMakerServer\RESTAPI\Supporting\FileMakerLayout
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/INTERMediator.html">INTERMediator</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_create" title="create :: Create a record on the target layout of the FileMaker database.">
+            <span class="description">Create a record on the target layout of the FileMaker database.</span><pre>create</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_delete" title="delete :: Delete on record.">
+            <span class="description">Delete on record.</span><pre>delete</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_duplicate" title="duplicate :: Duplicate record.">
+            <span class="description">Duplicate record.</span><pre>duplicate</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_endCommunication" title="endCommunication :: Finish a transaction which is a serial calling of any database operations, and logout.">
+            <span class="description">Finish a transaction which is a serial calling of any database operations, and logout.</span><pre>endCommunication</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getDebugInfo" title="getDebugInfo :: Get debug information includes internal request URL and request body.">
+            <span class="description">Get debug information includes internal request URL and request body.</span><pre>getDebugInfo</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMetadata" title="getMetadata :: Get metadata information of the layout.">
+            <span class="description">Get metadata information of the layout.</span><pre>getMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMetadataOld" title="getMetadataOld :: Get the metadata information of the layout. Until ver.16 this method was &#039;getMetadata&#039;.">
+            <span class="description">Get the metadata information of the layout. Until ver.16 this method was &#039;getMetadata&#039;.</span><pre>getMetadataOld</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getRecord" title="getRecord :: Query to the FileMaker Database with recordId special field and returns the result as FileMakerRelation object.">
+            <span class="description">Query to the FileMaker Database with recordId special field and returns the result as FileMakerRelation object.</span><pre>getRecord</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getScriptError" title="getScriptError :: Get the script error code.">
+            <span class="description">Get the script error code.</span><pre>getScriptError</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getScriptErrorPrerequest" title="getScriptErrorPrerequest :: Get the prerequest script error code.">
+            <span class="description">Get the prerequest script error code.</span><pre>getScriptErrorPrerequest</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getScriptErrorPresort" title="getScriptErrorPresort :: Get the presort script error code.">
+            <span class="description">Get the presort script error code.</span><pre>getScriptErrorPresort</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getScriptResult" title="getScriptResult :: Get the return value from the script.">
+            <span class="description">Get the return value from the script.</span><pre>getScriptResult</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getScriptResultPrerequest" title="getScriptResultPrerequest :: Get the return value from the prerequest script.">
+            <span class="description">Get the return value from the prerequest script.</span><pre>getScriptResultPrerequest</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getScriptResultPresort" title="getScriptResultPresort :: Get the return value from the presort script.">
+            <span class="description">Get the return value from the presort script.</span><pre>getScriptResultPresort</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_query" title="query :: Query to the FileMaker Database and returns the result as FileMakerRelation object.">
+            <span class="description">Query to the FileMaker Database and returns the result as FileMakerRelation object.</span><pre>query</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setGlobalField" title="setGlobalField :: Set the value to the global field.">
+            <span class="description">Set the value to the global field.</span><pre>setGlobalField</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_startCommunication" title="startCommunication :: Start a transaction which is a serial calling of any database operations,
+and login with the target layout.">
+            <span class="description">Start a transaction which is a serial calling of any database operations,
+and login with the target layout.</span><pre>startCommunication</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_update" title="update :: Update fields in one record.">
+            <span class="description">Update fields in one record.</span><pre>update</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_uploadFile" title="uploadFile :: Upload the file into container filed.">
+            <span class="description">Upload the file into container filed.</span><pre>uploadFile</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>FileMakerLayout</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Class FileMakerLayout is the proxy of layout in FileMaker database.</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>The object of this class is going to be generated by the FMDataAPI class,
+and you shouldn't call the constructor of this class.</p>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>INTER-Mediator\FileMakerServer\RESTAPI</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        link
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>GitHub Repository</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        version
+                                                                            </th>
+                                    <td>
+                                                                                    20
+                                                                                
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Masayuki Nii <a href="mailto:nii@msyk.net">nii@msyk.net</a></p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        copyright
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>2017-2019 Masayuki Nii (FileMaker is registered trademarks of FileMaker, Inc. in the U.S. and other countries.)</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_create"></a>
+                        <div class="element clickable method public  method_create" data-toggle="collapse" data-target=".method_create .collapse">
+                            <h2>Create a record on the target layout of the FileMaker database.</h2>
+                            <pre>create(array $data = null, array $portal = null, array $script = null) : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code>array</code><p><p>Associated array contains the initial values.
+Keys are field names and values is these initial values.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$portal</h4>
+                                                <code>array</code><p><p>Associated array contains the modifying values in portal.
+Ex.: {&quot;<PortalName>&quot;=&gt;{&quot;<FieldName>&quot;=&gt;&quot;<Value>&quot;...}}. FieldName has to &quot;<TOCName>::<FieldName>&quot;.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$script</h4>
+                                                <code>array</code><p><p>scripts that should execute right timings. See FileMakerRelation::query().</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p><p>The recordId of created record. If the returned value is an integer larger than 0,
+it shows one record was created.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_delete"></a>
+                        <div class="element clickable method public  method_delete" data-toggle="collapse" data-target=".method_delete .collapse">
+                            <h2>Delete on record.</h2>
+                            <pre>delete(integer $recordId, array $script = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$recordId</h4>
+                                                <code>integer</code><p><p>The valid recordId value to delete.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$script</h4>
+                                                <code>array</code><p><p>scripts that should execute right timings. See FileMakerRelation::query().</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_duplicate"></a>
+                        <div class="element clickable method public  method_duplicate" data-toggle="collapse" data-target=".method_duplicate .collapse">
+                            <h2>Duplicate record.</h2>
+                            <pre>duplicate(integer $recordId, array $script = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$recordId</h4>
+                                                <code>integer</code><p><p>The valid recordId value to duplicate.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$script</h4>
+                                                <code>array</code><p><p>scripts that should execute right timings. See FileMakerRelation::query().</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_endCommunication"></a>
+                        <div class="element clickable method public  method_endCommunication" data-toggle="collapse" data-target=".method_endCommunication .collapse">
+                            <h2>Finish a transaction which is a serial calling of any database operations, and logout.</h2>
+                            <pre>endCommunication() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getDebugInfo"></a>
+                        <div class="element clickable method public  method_getDebugInfo" data-toggle="collapse" data-target=".method_getDebugInfo .collapse">
+                            <h2>Get debug information includes internal request URL and request body.</h2>
+                            <pre>getDebugInfo() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getMetadata"></a>
+                        <div class="element clickable method public  method_getMetadata" data-toggle="collapse" data-target=".method_getMetadata .collapse">
+                            <h2>Get metadata information of the layout.</h2>
+                            <pre>getMetadata() : object</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>object</code><p><p>The metadata information of the layout. It has 2 properties 'fieldMetaData' and  'fieldMetaData'.
+The later one has properties having portal object name of TO name. The array of the field information is set under
+'fieldMetaData' and the portal named properties.
+Ex.: {&quot;fieldMetaData&quot;: [{&quot;name&quot;: &quot;id&quot;,&quot;type&quot;: &quot;normal&quot;,&quot;displayType&quot;: &quot;editText&quot;,&quot;result&quot;: &quot;number&quot;,&quot;global&quot;: false,
+&quot;autoEnter&quot;: true,&quot;fourDigitYear&quot;: false,&quot;maxRepeat&quot;: 1,&quot;maxCharacters&quot;: 0,&quot;notEmpty&quot;: false,&quot;numeric&quot;: false,
+&quot;timeOfDay&quot;: false,&quot;repetitionStart&quot;: 1,&quot;repetitionEnd&quot;: 1},....,],&quot;portalMetaData&quot;: {&quot;Contact&quot;: [{
+&quot;name&quot;: &quot;contact_to::id&quot;,&quot;type&quot;: &quot;normal&quot;,...},...], &quot;history_to&quot;: [{&quot;name&quot;: &quot;history_to::id&quot;,&quot;type&quot;: &quot;normal&quot;,
+...}...]}</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getMetadataOld"></a>
+                        <div class="element clickable method public  method_getMetadataOld" data-toggle="collapse" data-target=".method_getMetadataOld .collapse">
+                            <h2>Get the metadata information of the layout. Until ver.16 this method was &#039;getMetadata&#039;.</h2>
+                            <pre>getMetadataOld() : object</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>object</code><p><p>The metadata information of the layout. It has just 1 property 'metaData' the array of the field
+information is set under the 'metaData' property. There is no information about portals. Ex.:
+{&quot;metaData&quot;: [{&quot;name&quot;: &quot;id&quot;,&quot;type&quot;: &quot;normal&quot;,&quot;result&quot;: &quot;number&quot;,&quot;global&quot;: &quot;false&quot;,&quot;repetitions&quot;: 1,&quot;id&quot;: &quot;1&quot;},
+{&quot;name&quot;: &quot;name&quot;,&quot;type&quot;: &quot;normal&quot;,&quot;result&quot;: &quot;text&quot;,&quot;global&quot;: &quot;false&quot;,&quot;repetitions&quot;: 1,&quot;id&quot;: &quot;2&quot;},,....,]}</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getRecord"></a>
+                        <div class="element clickable method public  method_getRecord" data-toggle="collapse" data-target=".method_getRecord .collapse">
+                            <h2>Query to the FileMaker Database with recordId special field and returns the result as FileMakerRelation object.</h2>
+                            <pre>getRecord(integer $recordId, array $portal = null, array $script = null) : \INTERMediator\FileMakerServer\RESTAPI\Supporting\FileMakerRelation|null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$recordId</h4>
+                                                <code>integer</code><p><p>The recordId.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$portal</h4>
+                                                <code>array</code><p><p>See the query() method's same parameter.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$script</h4>
+                                                <code>array</code><p><p>scripts that should execute right timings. See FileMakerRelation::query().</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/INTERMediator.FileMakerServer.RESTAPI.Supporting.FileMakerRelation.html">\INTERMediator\FileMakerServer\RESTAPI\Supporting\FileMakerRelation</a>|null</code><p><p>Query result.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getScriptError"></a>
+                        <div class="element clickable method public  method_getScriptError" data-toggle="collapse" data-target=".method_getScriptError .collapse">
+                            <h2>Get the script error code.</h2>
+                            <pre>getScriptError() : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p><p>The value of the error code.
+If any script wasn't called, returns null.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getScriptErrorPrerequest"></a>
+                        <div class="element clickable method public  method_getScriptErrorPrerequest" data-toggle="collapse" data-target=".method_getScriptErrorPrerequest .collapse">
+                            <h2>Get the prerequest script error code.</h2>
+                            <pre>getScriptErrorPrerequest() : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p><p>The value of the error code.
+If any script wasn't called, returns null.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getScriptErrorPresort"></a>
+                        <div class="element clickable method public  method_getScriptErrorPresort" data-toggle="collapse" data-target=".method_getScriptErrorPresort .collapse">
+                            <h2>Get the presort script error code.</h2>
+                            <pre>getScriptErrorPresort() : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p><p>The value of the error code.
+If any script wasn't called, returns null.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getScriptResult"></a>
+                        <div class="element clickable method public  method_getScriptResult" data-toggle="collapse" data-target=".method_getScriptResult .collapse">
+                            <h2>Get the return value from the script.</h2>
+                            <pre>getScriptResult() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>The return value from the script.
+If any script wasn't called, returns null.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getScriptResultPrerequest"></a>
+                        <div class="element clickable method public  method_getScriptResultPrerequest" data-toggle="collapse" data-target=".method_getScriptResultPrerequest .collapse">
+                            <h2>Get the return value from the prerequest script.</h2>
+                            <pre>getScriptResultPrerequest() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>The return value from the prerequest script.
+If any script wasn't called, returns null.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getScriptResultPresort"></a>
+                        <div class="element clickable method public  method_getScriptResultPresort" data-toggle="collapse" data-target=".method_getScriptResultPresort .collapse">
+                            <h2>Get the return value from the presort script.</h2>
+                            <pre>getScriptResultPresort() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p><p>The return value from the presort script.
+If any script wasn't called, returns null.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_query"></a>
+                        <div class="element clickable method public  method_query" data-toggle="collapse" data-target=".method_query .collapse">
+                            <h2>Query to the FileMaker Database and returns the result as FileMakerRelation object.</h2>
+                            <pre>query(array $condition = null, array $sort = null, integer $offset, integer $range, array $portal = null, array $script = null) : \INTERMediator\FileMakerServer\RESTAPI\Supporting\FileMakerRelation|null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$condition</h4>
+                                                <code>array</code><p><p>The array of associated array which has a field name and &quot;omit&quot; keys as like:
+array(array(&quot;FamilyName&quot;=&gt;&quot;Nii<em>&quot;, &quot;Country&quot;=&gt;&quot;Japan&quot;)).
+In this example of apply the AND operation for two fields,
+and &quot;FamilyName&quot; and &quot;Country&quot; are field name. The value can contain the operator:
+=, ==, !, &lt;, ≤ or &lt;=, &gt;, ≥ or &gt;=, ..., //, ?, @, #, </em>, \, &quot;&quot;, ~.
+If you want to apply the OR operation, describe array of array as like:
+array(array(&quot;FamilyName&quot;=&gt;&quot;Nii<em>&quot;), array(&quot;Country&quot;=&gt;&quot;Japan&quot;)).
+If you want to omit records match with condition set the &quot;omit&quot; element as like:
+array(&quot;FamilyName&quot;=&gt;&quot;Nii</em>&quot;, &quot;omit&quot;=&gt;&quot;true&quot;).
+If you want to query all records in the layout, set the first parameter to null.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$sort</h4>
+                                                <code>array</code><p><p>The array of associated array which has &quot;fieldName&quot; and &quot;sortOrder&quot; keys as like:
+array(array(&quot;fieldName&quot;=&gt;&quot;FamilyName&quot;, &quot;sortOrder&quot;=&gt;&quot;ascend&quot;), array(&quot;fieldName&quot;=&gt;&quot;GivenName&quot;, &quot;sortOrder&quot;=&gt;&quot;ascend&quot;)).
+The value of sortOrder key can be 'ascend', 'descend' or value list name.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$offset</h4>
+                                                <code>integer</code><p><p>The start number of the record set, and the first record is 0.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$range</h4>
+                                                <code>integer</code><p><p>The number of records contains in the result record set.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$portal</h4>
+                                                <code>array</code><p><p>The array of the portal's object names. The query result is going to contain portals
+specified in this parameter. If you want to include all portals, set it null or omit it.
+Simple case is array('portal1', portal2'), and just includes two portals named 'portal1' and 'portal2'
+in the query result. If you set the range of records to a portal, you have to build associated array as like:
+array('portal1' =&gt; array('offset'=&gt;1,'range'=&gt;5), 'portal2' =&gt; null). The record 1 to 5 of portal1 include
+the query result, and also all records in portal2 do.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$script</h4>
+                                                <code>array</code><p><p>scripts that should execute right timings.
+The most understandable description is an associated array with API's keywords &quot;script&quot;, &quot;script.param&quot;,
+&quot;script.prerequest&quot;, &quot;script.prerequest.param&quot;, &quot;script.presort&quot;, &quot;script.presort.param&quot;, &quot;layout.response.&quot;
+These keywords have to be a key, and the value is script name or script parameter,
+ex. {&quot;script&quot;=&gt;&quot;StartingOver&quot;, &quot;script.param&quot;=&gt;&quot;344|21|abcd&quot;}.
+If $script is array with one element, it's handled as the value of &quot;script.&quot;
+If $script is array with two elements, these are handled as values of &quot;script&quot; and &quot;layout.response.&quot;
+If it it's three elements, these are  &quot;script&quot;, &quot;script.param&quot; and &quot;layout.response.&quot;
+If it it's four elements, these are  &quot;script.prerequest&quot;, &quot;script.presort&quot;, &quot;script&quot; and &quot;layout.response.&quot;</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/INTERMediator.FileMakerServer.RESTAPI.Supporting.FileMakerRelation.html">\INTERMediator\FileMakerServer\RESTAPI\Supporting\FileMakerRelation</a>|null</code><p><p>Query result.</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setGlobalField"></a>
+                        <div class="element clickable method public  method_setGlobalField" data-toggle="collapse" data-target=".method_setGlobalField .collapse">
+                            <h2>Set the value to the global field.</h2>
+                            <pre>setGlobalField(array $fields) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fields</h4>
+                                                <code>array</code><p><p>Associated array contains the global field names and its values.
+Keys are global field names and values is these values.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_startCommunication"></a>
+                        <div class="element clickable method public  method_startCommunication" data-toggle="collapse" data-target=".method_startCommunication .collapse">
+                            <h2>Start a transaction which is a serial calling of any database operations,
+and login with the target layout.</h2>
+                            <pre>startCommunication() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_update"></a>
+                        <div class="element clickable method public  method_update" data-toggle="collapse" data-target=".method_update .collapse">
+                            <h2>Update fields in one record.</h2>
+                            <pre>update(integer $recordId, array $data, integer $modId = -1, array $portal = null, array $script = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$recordId</h4>
+                                                <code>integer</code><p><p>The valid recordId value to update.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code>array</code><p><p>Associated array contains the modifying values.
+Keys are field names and values is these initial values.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$modId</h4>
+                                                <code>integer</code><p><p>The modId to allow to update. This parameter is for detect to modifying other users.
+If you omit this parameter, update operation does not care the value of modId special field.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$portal</h4>
+                                                <code>array</code><p><p>Associated array contains the modifying values in portal.
+Ex.: {&quot;<PortalName>&quot;=&gt;{&quot;<FieldName>&quot;=&gt;&quot;<Value>&quot;, &quot;recordId&quot;=&gt;&quot;12&quot;}}. FieldName has to &quot;<TOCName>::<FieldName>&quot;.
+The recordId key specifiy the record to edit in portal.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$script</h4>
+                                                <code>array</code><p><p>scripts that should execute right timings. See FileMakerRelation::query().</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_uploadFile"></a>
+                        <div class="element clickable method public  method_uploadFile" data-toggle="collapse" data-target=".method_uploadFile .collapse">
+                            <h2>Upload the file into container filed.</h2>
+                            <pre>uploadFile(string $filePath, integer $recordId, string $containerFieldName, integer $containerFieldRepetition = null, string $fileName = null) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd><p>In case of any error, an exception arises.</p></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$filePath</h4>
+                                                <code>string</code><p><p>The file path to upload.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$recordId</h4>
+                                                <code>integer</code><p><p>The Record Id of the record.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$containerFieldName</h4>
+                                                <code>string</code><p><p>The field name of container field.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$containerFieldRepetition</h4>
+                                                <code>integer</code><p><p>In case of repetiton field, this has to be the number from 1.
+If omitted this, the number &quot;1&quot; is going to be specified.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fileName</h4>
+                                                <code>string</code><p><p>Another file name for uploading file. If omitted, origina file name is choosen.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                        </div>
+            </div>
+            <a id="\INTERMediator\FileMakerServer\RESTAPI\Supporting\FileMakerLayout"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/INTERMediator.FileMakerServer.RESTAPI.Supporting.html">Supporting</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/INTERMediator.FileMakerServer.RESTAPI.Supporting.FileMakerLayout.html">FileMakerLayout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Mon, 16 Sep 2019 15:49:23 +0000.<br/>
+    </footer>
+    </body>
+</html>
