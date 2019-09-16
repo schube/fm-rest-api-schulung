@@ -13,10 +13,11 @@ if(!Request::hasParameter('benutzername') || !Request::hasParameter('passwort'))
 
 } else {
 	$fmdb = new FMDataAPI(FM_DATABASE, FM_USER, FM_PASSWORD, FM_HOST);
-	$condition=[];
-	$condition['benutzername']='=='.Request::getRequiredParameter('benutzername');
-	$condition['passwort']='=='.Request::getRequiredParameter('passwort');
-	$record = $fmdb->layout('user')->query(array($condition));
+	$conditions=[];
+	$conditions[] = array('benutzername'=>'=='.Request::getRequiredParameter('benutzername'));
+	$conditions[] = array('passwort'=>'=='.Request::getRequiredParameter('passwort'));
+	
+	$record = $fmdb->layout('user')->query($conditions);
 	
 	$spitzname = $record->field('Spitzname');
 	
