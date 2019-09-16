@@ -15,9 +15,11 @@ $fmdb = new FMDataAPI(FM_DATABASE, FM_USER, FM_PASSWORD, FM_HOST);
 //$fmdb->setDebug(true);
 //$fmdb->startCommunication();
 $sort = [];
+$sort[] = array('Vorname', 'ascend');
 $sort[] = array('DatumUndUhrzeit', 'descend');
 
-$result = $fmdb->layout('www')->query(null, $sort, $offset, $itemsPerPage);
+
+$result = $fmdb->layout('www')->query(null, $sort, 0, $itemsPerPage);
 
 // var_dump($result->getFieldnames());
 
