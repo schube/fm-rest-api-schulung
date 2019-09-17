@@ -7,6 +7,6 @@ require 'vendor/autoload.php';
 
 
 define("FM_DATABASE","gaestebuch");
-define("FM_HOST", "fmserver.domain.com");
-define("FM_USER", "xxx");
-define("FM_PASSWORD", "xxx");    
+define("FM_HOST", "localhost");
+define("FM_USER", "Admin");
+define("FM_PASSWORD", "Admin");    
