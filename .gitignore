@@ -2,3 +2,7 @@
 gaestebuch/vendor
 composer.lock
 gaestebuch/templates_c
+word/vendor
+word/helloWorld.docx
+word/helloWorld.html
+word/helloWorld.odt
